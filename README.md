@@ -27,7 +27,7 @@ Usage
 
 Add to params file:
 ```php
-'PushallFeedId' => 'Your feed id',
+'PushallFeedId' => 111 //Your feed id. It mast be integer,
 'PushallKey' => 'Your feed key',
 ```
 
