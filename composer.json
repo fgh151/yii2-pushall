@@ -1,0 +1,23 @@
+{
+    "name": "fgh151/yii2-pushall-logger",
+    "description": "Yii2 pushall.ru logger",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fedor B Gorsky",
+            "email": "fedor@support-pc.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "yiisoft/yii2": "~2.0.0",
+        "platx/pushall": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "fgh151\\logger\\": ""
+        }
+    }
+}
