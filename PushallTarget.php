@@ -6,7 +6,7 @@
  * Time: 10:47
  */
 
-namespace fgh151\logger;
+namespace fgh151\pushall;
 
 use platx\pushall\PushAll;
 use yii\log\Target;
