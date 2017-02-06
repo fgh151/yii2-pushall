@@ -17,7 +17,7 @@ class PushallTarget extends Target
     public function export()
     {
         (new PushAll(Yii::$app->params['PushallFeedId'], Yii::$app->params['PushallKey']))->send(array(
-            'type' => PushAll::TYPE_BROADCAST,
+            'type' => PushAll::TYPE_SELF,
             'title' => Yii::$app->name.' '.date('d.m.Y H:i:s'),
             'text' => implode("\n", array_map([$this, 'formatMessage'], $this->messages))
         ));

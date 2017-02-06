@@ -21,17 +21,16 @@ or add
 
 to the require section of your `composer.json` file.
 
-
-Usage
------
-
-###Logs
-
 Add to params file:
 ```php
 'PushallFeedId' => 111 //Your feed id. It mast be integer,
 'PushallKey' => 'Your feed key',
 ```
+
+Usage
+-----
+
+###Logs
 
 How to get feed id and key see [documentation](https://pushall.ru/blog/create)
 
