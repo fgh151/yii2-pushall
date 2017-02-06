@@ -55,6 +55,7 @@ class PushallBehavior extends AttributeBehavior
     {
         return [
             ActiveRecord::EVENT_AFTER_INSERT => 'pushallSend',
+
         ];
     }
 
@@ -78,11 +79,13 @@ class PushallBehavior extends AttributeBehavior
      */
     public function pushallSend()
     {
+        $messageText = $this->messageAttribute;
         $message = $this->url !== '' ? $this->url . "\n" : '';
-        $message .= $this->messageAttribute;
+        $message .= $this->owner->$messageText;
+        $titleAttribute = $this->titleAttribute;
         (new PushAll($this->feedId, $this->feedKey))->send(array(
             'type' => $this->chanelType,
-            'title' => $this->titleAttribute,
+            'title' => $this->owner->$titleAttribute,
             'text' => $message
         ));
 
